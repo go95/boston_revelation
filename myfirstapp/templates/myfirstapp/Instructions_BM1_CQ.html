@@ -1,0 +1,66 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    BM1: проверочные вопросы
+{% endblock %}
+
+{% block inner_content %}
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 1. Если Вы скажете, что ценности университетов <b> A </b> и <b> B </b> близки,
+                то в какой университет будет направлено Ваше заявление?
+            </h6>
+            {% formfield player.cq1_a %}
+            {% formfield player.cq1_b %}
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 2. В университете <b> A </b> 4 места, в университете <b> B </b> 3 места.
+                Вы и еще 1 человек сказали, что ценности университетов близки, а остальные сказали, что не близки.
+                В какой университет Вы попадете?
+            </h6>
+            {% formfield player.cq2_a %}
+            {% formfield player.cq2_b %}
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 3. В университете <b> A </b> 4 места, <b> B </b> - 2 места.
+                На первом этапе все участники сказали, что ценности <b> A </b> и <b> B </b> для них не близки.
+                Сколько человек конкурирует за поступление в университет <b> B </b> на втором этапе?
+            </h6>
+            {% formfield player.cq3_a %}
+            {% formfield player.cq3_b %}
+            {% formfield player.cq3_c %}
+        </div>
+    </div>
+
+
+    <div class="my-3">
+        {% next_button %}
+    </div>
+    {% include Constants.instructions_template %}
+
+    {{ block.super }}
+{% endblock %}
+{% block scripts %}
+    <script>$('#id_contribution').focus();</script>
+
+{% endblock %}
+
+{% block styles %}
+    <style>
+        .card {
+            margin-top: 10px;
+        }
+    </style>
+{% endblock %}

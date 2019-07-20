@@ -1,0 +1,65 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Раунд {{subsession.round_number}}
+{% endblock %}
+
+{% block content %}
+	<table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Тип</th>
+            <th>Количество игроков</th>
+
+            <th>Доход после университета А</th>
+            <th>Доход после университета B</th>
+            <th>Доход в случае непоступления</th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <tr>
+            <th>Тип 1</th>
+            <th>4</th>
+
+            <th>100</th>
+            <th>Указано в вопросе</th>
+            <th>0</th>
+            <th><b>Вы игрок 1-ого типа</b></th>
+        </tr>
+
+        <tr>
+            <th>Тип 2</th>
+            <th>12</th>
+
+            <th>100</th>
+            <th>5</th>
+            <th>0</th>
+            <th></th>
+        </tr>
+    </table>
+</br>
+Количество мест в университете A: <b>{{ group.capacityA }}</b>. 
+</br>
+Количество мест в университете B: <b>{{ group.capacityB }}</b>. 
+</br>
+</br>
+{% if group.treatment_type == 0 %}
+                <i>В какой университет вы будете подавать заявление в первую очередь?</i>
+{% endif %}
+{% if group.treatment_type == 3 %}
+                <i>Считаете ли вы поступления в университеты А и B равнозначными?</i>
+{% endif %}
+{% if group.treatment_type == 2 %}
+                <i>Готовы ли вы отказаться от подачи заявления в университет A?</i>
+{% endif %}
+{% if group.treatment_type == 1 %}
+                <i>Ценнее ли для вас школа B относительно других участников?</i>
+                
+{% endif %}
+
+	{% formfields %}
+    {% next_button %}
+
+{% endblock %}

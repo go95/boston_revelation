@@ -1,0 +1,68 @@
+{% extends "global/Page.html" %}
+
+{% load otree %}
+
+{% block title %}
+    BM2: проверочные вопросы
+{% endblock %}
+
+{% block inner_content %}
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 1. Если Вы скажете, что готовы отказаться от подачи заявления в университет <b> A </b>, то в какой университет пойдет Ваше заявление?
+            </h6>
+            {% formfield player.cq1_a %}
+            {% formfield player.cq1_b %}
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 2. В университете <b> A </b> 5 мест, в университете <b> B </b> 2 места.
+                Все участники Вашей группы, в которой 4 человека, включая Вас, сказали, что готовы отказаться от университета <b> A </b>.
+                Все участники второй группы сказали, что не готовы отказаться от университета <b> A </b>.
+                Сколько человек из второй группы окажется в университете <b> C </b>?
+            </h6>
+            {% formfield player.cq2_a %}
+            {% formfield player.cq2_b %}
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 3. В университете <b> A </b> 4 места, в университете В 2 места.
+                Все участники Вашей группы, в которой 4 человека, включая Вас, сказали, что готовы отказаться от университета <b> A </b>.
+                Все участники второй группы сказали, что не готовы отказаться.
+                Если Вас не взяли в университет <b> B </b>, каков будет Ваш выигрыш в этом раунде?
+            </h6>
+            {% formfield player.cq3_a %}
+            {% formfield player.cq3_b %}
+            {% formfield player.cq3_c %}
+        </div>
+    </div>
+
+
+    <div class="my-3">
+        {% next_button %}
+    </div>
+    {% include Constants.instructions_template %}
+
+    {{ block.super }}
+{% endblock %}
+{% block scripts %}
+    <script>$('#id_contribution').focus();</script>
+
+{% endblock %}
+
+{% block styles %}
+    <style>
+        .card {
+            margin-top: 10px;
+        }
+    </style>
+{% endblock %}

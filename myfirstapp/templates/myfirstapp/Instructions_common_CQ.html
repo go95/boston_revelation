@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Введение: проверочные вопросы
+{% endblock %}
+
+{% block inner_content %}
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 1. Вы - участник из группы 1. Сколько участников ценят университет <b> А </b> выше остальных университетов?
+            </h6>
+            {% formfield player.cq1_a %}
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 2. Вы - участник из группы 1. Сколько участников ценят университет <b> B </b> так же, как Вы?
+            </h6>
+            {% formfield player.cq2_a %}
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-title">
+                Вопрос 3. Вы - участник из группы 1. Ценность университета <b> B </b>, для другого участника из группы 1 равна 70.
+                По окончании раунда Вы оказались распределены в университет <b> B </b>. Каков Ваш выигрыш в конце раунда?
+            </h6>
+            {% formfield player.cq3_a %}
+        </div>
+    </div>
+
+
+    <div class="my-3">
+        {% next_button %}
+    </div>
+
+    {{ block.super }}
+{% endblock %}
+{% block scripts %}
+    <script>$('#id_contribution').focus();</script>
+
+{% endblock %}
+
+{% block styles %}
+    <style>
+        .card {
+            margin-top: 10px;
+        }
+    </style>
+{% endblock %}

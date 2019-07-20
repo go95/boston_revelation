@@ -1,0 +1,44 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Списки к зачислению
+    Стратегический отчет
+{% endblock %}
+
+{% block content %}
+    <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Раунд:</th>
+            <th>Доход после выпуска из B</th>
+
+
+            <th>Ваше решение</th>
+            <th>Вы попали в университет</th>
+            <th>Ваш выигрыш</th>
+        </tr>
+        </thead>
+
+        {% for i, rounds, strat in all_rounds %}
+            <tr>
+                <td>{{ i }}</td>
+                <td>{{ rounds.group.Bvalue }}</td>
+
+                <td>{{ strat }}</td>
+                <td>{{ rounds.allocation }}</td>
+                <td>{{ rounds.payoff }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <li class="list-group-item">
+                    <h5 class="text-center font-weight-bold">
+                        Ваш выигрыш итого: {{ participant.payoff }}
+
+                    </h5>
+
+                </li>
+    {% next_button %}
+{% endblock %}
+
+
