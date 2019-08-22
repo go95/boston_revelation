@@ -67,7 +67,8 @@ class Instructions_common1(Page):
             e = 'рубля'
         else:
             e = 'рублей'
-        return {'ending': e}
+        #return {'ending': e}
+        return {'ending': 'HSE'}
 
 
 

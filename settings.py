@@ -16,14 +16,14 @@ SESSION_CONFIGS = [
        'name': 'boston',
        'display_name': "Boston",
        'num_demo_participants': 16,
-       'app_sequence': ['myfirstapp'],
+       'app_sequence': ['myfirstapp', 'questionaire'],
        'real_world_currency_per_point': 0.15
     },
      {
        'name': 'boston0',
        'display_name': "Boston 0",
        'num_demo_participants': 4,
-       'app_sequence': ['myfirstapp'],
+       'app_sequence': ['myfirstapp', 'questionaire'],
        'experimental_group': 0,
        'real_world_currency_per_point': 0.15
     },
@@ -31,7 +31,7 @@ SESSION_CONFIGS = [
        'name': 'boston1',
        'display_name': "Boston 1",
        'num_demo_participants': 4,
-       'app_sequence': ['myfirstapp'],
+       'app_sequence': ['myfirstapp', 'questionaire'],
        'experimental_group': 1,
        'real_world_currency_per_point': 0.15
     },
@@ -39,7 +39,7 @@ SESSION_CONFIGS = [
        'name': 'boston2',
        'display_name': "Boston 2",
        'num_demo_participants': 4,
-       'app_sequence': ['myfirstapp'],
+       'app_sequence': ['myfirstapp', 'questionaire'],
        'experimental_group': 2,
        'real_world_currency_per_point': 0.15
     },
@@ -47,10 +47,18 @@ SESSION_CONFIGS = [
        'name': 'boston3',
        'display_name': "Boston 3",
        'num_demo_participants': 4,
-       'app_sequence': ['myfirstapp'],
+       'app_sequence': ['myfirstapp', 'questionaire'],
        'experimental_group': 3,
        'real_world_currency_per_point': 0.15
     },
+     {
+       'name': 'questionaire',
+       'display_name': "Questionaire",
+       'num_demo_participants': 1,
+       'app_sequence': ['questionaire'],
+       'experimental_group': 3,
+       'real_world_currency_per_point': 0.15
+    }
 ]
 
 
