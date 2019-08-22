@@ -6,50 +6,50 @@ from os import environ
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = {
-    'real_world_currency_per_point': 1.00,
+    'real_world_currency_per_point': 0.15,
     'participation_fee': 0.00,
     'doc': "",
 }
 
 SESSION_CONFIGS = [
     {
-       'name': 'public_goods',
-       'display_name': "Public Goods",
+       'name': 'boston',
+       'display_name': "Boston",
        'num_demo_participants': 16,
        'app_sequence': ['myfirstapp'],
-       'real_world_currency_per_point': 0.5
+       'real_world_currency_per_point': 0.15
     },
      {
-       'name': 'public_goods0',
-       'display_name': "Public Goods0",
+       'name': 'boston0',
+       'display_name': "Boston 0",
        'num_demo_participants': 4,
        'app_sequence': ['myfirstapp'],
        'experimental_group': 0,
-       'real_world_currency_per_point': 0.5
+       'real_world_currency_per_point': 0.15
     },
      {
-       'name': 'public_goods1',
-       'display_name': "Public Goods1",
+       'name': 'boston1',
+       'display_name': "Boston 1",
        'num_demo_participants': 4,
        'app_sequence': ['myfirstapp'],
        'experimental_group': 1,
-       'real_world_currency_per_point': 0.5
+       'real_world_currency_per_point': 0.15
     },
      {
-       'name': 'public_goods2',
-       'display_name': "Public Goods2",
+       'name': 'boston2',
+       'display_name': "Boston 2",
        'num_demo_participants': 4,
        'app_sequence': ['myfirstapp'],
        'experimental_group': 2,
-       'real_world_currency_per_point': 0.5
+       'real_world_currency_per_point': 0.15
     },
      {
-       'name': 'public_goods3',
-       'display_name': "Public Goods3",
+       'name': 'boston3',
+       'display_name': "Boston 3",
        'num_demo_participants': 4,
        'app_sequence': ['myfirstapp'],
        'experimental_group': 3,
-       'real_world_currency_per_point': 0.5
+       'real_world_currency_per_point': 0.15
     },
 ]
 
@@ -62,7 +62,7 @@ LANGUAGE_CODE = 'ru'
 REAL_WORLD_CURRENCY_CODE = 'RUR'
 USE_POINTS = True
 
-ROOMS = [{'name':'myroom','display_name':'`my new room'}]
+ROOMS = [{'name':'main','display_name':'main'}, {'name':'aux','display_name':'aux'}]
 
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
